@@ -27,6 +27,7 @@ def evaluate_model(model: RegressorMixin,
         rmse_class = RMSE()
         rmse = rmse_class.calculate_score(y_test, prediction)
 
+
         return r2, rmse
 
     except Exception as e:
