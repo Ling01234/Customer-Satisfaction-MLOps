@@ -16,7 +16,7 @@ def evaluate_model(model: RegressorMixin,
                        Annotated[float, 'rmse']]:
 
     try:
-        prediction = model.prediction(X_test)
+        prediction = model.predict(X_test)
 
         mse_class = MSE()
         mse = mse_class.calculate_score(y_test, prediction)
@@ -26,7 +26,6 @@ def evaluate_model(model: RegressorMixin,
 
         rmse_class = RMSE()
         rmse = rmse_class.calculate_score(y_test, prediction)
-
 
         return r2, rmse
 

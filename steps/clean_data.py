@@ -15,12 +15,12 @@ def clean_data(df: pd.DataFrame) -> Tuple[
 ]:
     try:
         process_strategy = DataPreprocessStrategy()
-        data_cleaning = DataCleaning(df, process_strategy)
-        processed_data = DataCleaning.handle_data()
+        data_clean = DataCleaning(df, process_strategy)
+        processed_data = data_clean.handle_data()
 
         divide_strategy = DataDivideStrategy()
-        data_cleaning = DataCleaning(processed_data, divide_strategy)
-        X_train, X_test, y_train, y_test = data_cleaning.handle_data()
+        data_clean = DataCleaning(processed_data, divide_strategy)
+        X_train, X_test, y_train, y_test = data_clean.handle_data()
 
         logging.info('Data cleaning completed')
 
