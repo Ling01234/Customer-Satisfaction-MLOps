@@ -1,0 +1,4 @@
+name: customer-satisfaction
+channels:
+  - defaults
+prefix: C:\Users\Ling0\.conda\envs\customer-satisfaction
